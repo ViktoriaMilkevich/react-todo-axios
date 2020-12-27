@@ -4,7 +4,7 @@ import { Card } from 'antd';
 import { ToDoItem } from './ToDoItem';
 import { ToDoForm } from './ToDoForm';
  
-const token = '53db1f9381556dda3ddaaa494fb2137b8ca3b327';
+const token = '78b9d28baffddc943ce761fb2d4db6e740392da2';
 const config = {
   headers: { Authorization: `Bearer ${token}` }
 };
@@ -69,8 +69,8 @@ export const ToDo = () => {
       }
     }
 
-    const onSubmit = async (content) => {
-        const todo = { content };
+    const onSubmit = async (content, due_date) => {
+        const todo = { content, due_date };
     
         const { data } = await axios.post(
           `https://api.todoist.com/rest/v1/tasks`,

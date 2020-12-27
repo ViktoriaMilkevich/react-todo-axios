@@ -30,6 +30,7 @@ export const ToDoItem = (props) => {
         onChange={onCheckItem}
       ></Checkbox>
       <Paragraph editable={{ onChange: onEditItem }}>{item.content}</Paragraph>
+      <Paragraph>{item.due_date}</Paragraph>
       <Button onClick={onRemoveItem}>Remove</Button>
     </li>
   )
